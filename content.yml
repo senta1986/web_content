@@ -1,14 +1,14 @@
 ---
-- name: Update web content based on tag
+- name: update the content 
   hosts: dev
   tasks:
-    - name: Copy content for blue tag
+    - name: UPdate the blue tag content
       ansible.builtin.copy:
-        content: "Welecome to Blue Server"
-        dest: /var/www/html/index.html
+        content: "Welcome to Blue Server"
+        dest: /var/www/html/index.html 
       tags: [never,blue]
-    - name: Copy content for green tag
+    - name: Update the green tag content
       ansible.builtin.copy:
-        content: "Welecome to Green Server"
-        dest: /var/www/html/index.html
+        content: "Welcome to Green Server"
+        dest: /var/www/html/index.html 
       tags: [never,green]
